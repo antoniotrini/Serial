@@ -9,8 +9,8 @@
 
 
 //***********  Variables  *********************************************************
-float numParell, numSenar;          
-float rSerie, rParalel;
+float numParell, numSenar;        
+float resParell, resSenar;
 
 //***********  Setup  *************************************************************
 void setup() {
@@ -21,40 +21,32 @@ void setup() {
 
 //***********  Loop  **************************************************************
 void loop() {
- while (Serial.available() > 0) {                   
-  
-    numParell = Serial.parseInt();                        
+ while (Serial.available() > 0) { 
+
+    numParell = Serial.parseInt();
     Serial.print("el ");
     Serial.print(numParell);
-    Serial.print(" es parell.");
-    
-    Serial.print("  ");
-    
+    Serial.print(" es parell."); 
+
     numSenar = Serial.parseInt();
     Serial.print("el ");
     Serial.print(numSenar);
-    Serial.println(" es parell.");
+    Serial.println(" es senar.");
     
     if (Serial.read() == '\n') {                    
       
-    rSerie = r1 + r2;
-    rParalel = (r1 * r2) / (r1 + r2);
+    numParell / 2;
+    numSenar / 3;                    
 
-    Serial.print("rSerie = ");
-    Serial.print(rSerie);
-    Serial.print(" Ohms");
+    Serial.print("el ");
+    Serial.print(numParell);
+    Serial.print(" es parell."); 
 
-    Serial.print("   ");
-
-    Serial.print("rParalel = ");
-    Serial.print(rParalel);
-    Serial.println(" Ohms");
-
-    Serial.println(" ");
-
-    Serial.println("Entra nous valors per r1 ir2");
-
-    Serial.println(" ");
+    Serial.print("el ");
+    Serial.print(numSenar);
+    Serial.println(" es senar.");
+    
+    Serial.print("Entrar un nou mumero, ");
     }
   } 
 }
